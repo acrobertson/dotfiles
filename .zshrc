@@ -72,7 +72,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=60"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm osx vscode wp-cli z zsh-syntax-highlighting zsh-autosuggestions deno cargo)
+plugins=(git npm osx vscode wp-cli z zsh-syntax-highlighting zsh-autosuggestions deno cargo direnv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,6 +120,7 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 # Misc. Exports
 export PATH="/usr/local/opt/ruby/bin:$PATH";
 export PATH="/Users/alecrobertson/.gem/ruby/2.6.0/bin:$PATH";
+export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:$PATH
 
 # prevent pasted text from being unreadable
