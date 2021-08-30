@@ -118,10 +118,11 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 # echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 
 # Misc. Exports
-export PATH="/usr/local/opt/ruby/bin:$PATH";
-export PATH="/Users/alecrobertson/.gem/ruby/2.6.0/bin:$PATH";
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:$PATH
+export HOMEBREW_BUNDLE_FILE=$HOME/Brewfile
 
 # prevent pasted text from being unreadable
 # unset zle_bracketed_paste
