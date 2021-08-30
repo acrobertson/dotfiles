@@ -13,13 +13,14 @@ You know the drill.
 To use everything included here, you'll need to install:
 
 - [Oh My ZSH](https://ohmyz.sh/) – framework for managing ZSH config
-- Homebrew – package manager
-- Karabiner Elements - app for keyboard bindings
+- [Homebrew](https://brew.sh/) – macOS package manager
+- [Karabiner-Elements](https://karabiner-elements.pqrs.org/) - app for keyboard customization
 
 ## Step 3: set up the symlinks
 
 ```zsh
 # assuming you cloned into ~/github/dotfiles
+cd ~
 
 ln -s ~/github/dotfiles/.zshrc .zshrc
 ln -s ~/github/dotfiles/Brewfile Brewfile
