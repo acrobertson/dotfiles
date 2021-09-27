@@ -1,4 +1,3 @@
-/plugins
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$PATH:$HOME/.composer/vendor/bin"
@@ -73,7 +72,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=60"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm osx vscode wp-cli z zsh-syntax-highlighting zsh-autosuggestions deno cargo rustup direnv)
+plugins=(git npm osx vscode wp-cli z zsh-syntax-highlighting zsh-autosuggestions deno cargo rustup direnv alias-tips)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -133,4 +132,29 @@ export HOMEBREW_BUNDLE_FILE=$HOME/Brewfile
 
 # fnm
 export PATH=$HOME/.fnm:$PATH
-eval "`fnm env --use-on-cd`"
+eval "$(fnm env --use-on-cd)"
+
+# add hook to run `valet use` when entering a Valet-configured directory
+autoload -U add-zsh-hook colors
+valet-use() {
+	local phprc_path="./.valetphprc"
+
+	# check if .valetphprc file exists in this directory
+	if [ -f "$phprc_path" ]; then
+		# make sure valet is executable
+		if valet_loc="$(type -p "valet")" || [[ -z $valet_loc ]]; then
+			echo ".valetphprc found. It wants $fg[cyan]$(cat $phprc_path). $fg[white]You're using: $fg[cyan]$(php -r 'echo PHP_VERSION;')"
+			if read -q "choice?$fg[white]Want to switch? $fg_bold[white]Press Y/y: $fg_no_bold[white]"; then
+				echo
+				valet use && composer global update
+			else
+				echo "\nIf you change your mind, run $fg[cyan]valet use && composer global update$fg[white]."
+			fi
+		else
+			echo "Valet not found. Have you installed it?"
+		fi
+	fi
+}
+add-zsh-hook chpwd valet-use
+colors
+valet-use
