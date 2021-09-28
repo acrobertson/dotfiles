@@ -143,8 +143,11 @@ valet-use() {
 	if [ -f "$phprc_path" ]; then
 		# make sure valet is executable
 		if valet_loc="$(type -p "valet")" || [[ -z $valet_loc ]]; then
-			echo ".valetphprc found. It wants $fg[cyan]$(cat $phprc_path). $fg[white]You're using: $fg[cyan]$(php -r 'echo PHP_VERSION;')"
-			if read -q "choice?$fg[white]Want to switch? $fg_bold[white]Press Y/y: $fg_no_bold[white]"; then
+			printf '%s' \
+				"Found a .valetphprc. It wants $fg[cyan]$(cat $phprc_path)$fg[white]; " \
+				"you're using $fg[cyan]$(php -r 'echo PHP_VERSION;')$fg[white]."
+			echo
+			if read -q "choice?Want to switch? $fg_bold[white]Press Y/y: $fg_no_bold[white]"; then
 				echo
 				valet use && composer global update
 			else
