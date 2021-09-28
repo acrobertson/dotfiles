@@ -9,13 +9,7 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
-
-# Spaceship theme settings
-SPACESHIP_PACKAGE_SHOW="false"
-SPACESHIP_GIT_STATUS_SHOW="false"
-SPACESHIP_PROMPT_PREFIXES_SHOW="false"
-SPACESHIP_CHAR_SYMBOL="⚰︎ "
+# ZSH_THEME="spaceship"
 
 #zsh-autosuggestions settings
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=60"
@@ -127,9 +121,6 @@ export HOMEBREW_BUNDLE_FILE=$HOME/Brewfile
 # prevent pasted text from being unreadable
 # unset zle_bracketed_paste
 
-# enable Starship prompt
-# eval "$(starship init zsh)"
-
 # fnm
 export PATH=$HOME/.fnm:$PATH
 eval "$(fnm env --use-on-cd)"
@@ -161,3 +152,6 @@ valet-use() {
 add-zsh-hook chpwd valet-use
 colors
 valet-use
+
+# enable Starship prompt
+eval "$(starship init zsh)"
