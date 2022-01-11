@@ -98,6 +98,9 @@ source $ZSH/oh-my-zsh.sh
 
 unalias composer
 
+# chezmoi
+alias cm="chezmoi"
+
 # Changed your .gitignore _after_ you have added / committed some files?
 # run `gri` to untrack anything in your updated .gitignore
 alias gri="git ls-files --ignored --exclude-standard | xargs -0 git rm -r"
