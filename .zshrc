@@ -1,6 +1,7 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="$PATH:$HOME/.composer/vendor/bin"
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -9,7 +10,7 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="spaceship"
+# ZSH_THEME="random"
 
 #zsh-autosuggestions settings
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=60"
@@ -66,7 +67,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=60"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm osx vscode wp-cli z zsh-syntax-highlighting zsh-autosuggestions deno cargo rustup direnv alias-tips)
+plugins=(git npm macos vscode wp-cli z zsh-syntax-highlighting zsh-autosuggestions deno rust direnv alias-tips)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,6 +96,8 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+unalias composer
+
 # Changed your .gitignore _after_ you have added / committed some files?
 # run `gri` to untrack anything in your updated .gitignore
 alias gri="git ls-files --ignored --exclude-standard | xargs -0 git rm -r"
@@ -108,18 +111,12 @@ alias nvmrc="node -v > .nvmrc"
 # fzf
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 
-# Python init
-# echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
-
 # Misc. Exports
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:$PATH
 export HOMEBREW_BUNDLE_FILE=$HOME/Brewfile
-
-# prevent pasted text from being unreadable
-# unset zle_bracketed_paste
 
 # fnm
 export PATH=$HOME/.fnm:$PATH
@@ -155,3 +152,8 @@ valet-use
 
 # enable Starship prompt
 eval "$(starship init zsh)"
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
