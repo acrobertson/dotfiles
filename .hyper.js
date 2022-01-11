@@ -92,30 +92,6 @@ module.exports = {
         //     lightWhite: '#FFFFFF',
         // },
 
-        // MaterialTheme: {
-        //     // Set the theme variant,
-        //     // OPTIONS: 'Darker', 'Palenight', 'Ocean', ''
-        //     theme: 'Darker',
-
-        //     // [Optional] Set the rgba() app background opacity, useful when enableVibrance is true
-        //     // OPTIONS: From 0.1 to 1
-        //     backgroundOpacity: '0.2',
-
-        //     // [Optional] Set the accent color for the current active tab
-        //     accentColor: '#64FFDA',
-
-        //     // [Optional] Mac Only. Need restart. Enable the vibrance and blurred background
-        //     // OPTIONS: 'dark', 'ultra-dark', 'bright'
-        //     // NOTE: The backgroundOpacity should be between 0.1 and 0.9 to see the effect.
-        //     vibrancy: 'ultra-dark',
-        // },
-
-        // verminal: {
-        //     fontFamily:
-        //         '"Source Code Pro for Powerline", Menlo, Consolas, "Lucida Console", monospace',
-        //     fontSize: 13,
-        // },
-
         hypest: {
             darkmode: true,
             borders: true,
@@ -152,9 +128,9 @@ module.exports = {
         // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
         defaultSSHApp: true,
 
-        hyperline: {
-            plugins: ["battery", "cpu", "memory", "ip", "spotify"],
-        },
+        // hyperline: {
+        //     plugins: ["battery", "cpu", "memory", "ip", "spotify"],
+        // },
 
         // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
         // selection is present (`true` by default on Windows and disables the context menu feature)
@@ -174,9 +150,6 @@ module.exports = {
     //   `project#1.0.1`
     plugins: [
         // "hyperline",
-        // 'verminal',
-        // 'hyper-material-theme',
-        // 'hyper-statusline',
         "hyper-fading-scrollbar",
         "hypercwd",
         "hyper-search",
