@@ -28,6 +28,8 @@ To use everything included here, you'll need to install:
 
 Make sure you've got the `Brewfile` in your home directory and then install all the Homebrew packages at once with `brew bundle`.
 
+EDIT: I've temporarily removed the Brewfile until I find a better way to manage it.
+
 ### Step 4: compile Karabiner bindings
 
 Now that [Goku](https://github.com/yqrashawn/GokuRakuJoudo) is installed, compile the Karabiner config by running `goku`. If you want to run the service in the background to recompile anytime the Goku file is edited, run `brew services start goku`.
