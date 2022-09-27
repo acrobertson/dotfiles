@@ -33,7 +33,6 @@ antigen bundles <<EOBUNDLES
 	vscode
 
 	# GitHub Plugins
-	agkozak/zsh-z
 	djui/alias-tips
 	ntnyq/omz-plugin-pnpm@main
 	zsh-users/zsh-autosuggestions
@@ -140,6 +139,9 @@ vterm_printf(){
         printf "\e]%s\e\\" "$1"
     fi
 }
+
+# Init zoxide
+eval "$(zoxide init zsh)"
 
 # Init prompt
 eval "$(starship init zsh)"
