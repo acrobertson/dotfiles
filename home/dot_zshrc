@@ -51,6 +51,13 @@ antigen apply
 
 ### Aliases ###
 
+# chezmoi
+alias cm="chezmoi"
+alias cma="cm add"
+alias cmc="cm cd"
+alias cmd="cm diff"
+alias cme="cm edit"
+
 # Use `lsd` over default `ls`
 alias ls="lsd"
 alias l="ls -lah"
