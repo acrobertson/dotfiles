@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Alec Robertson
+	email = {{ (onepasswordItemFields "ka3htbs4nlfpoxi5z4ojjqhcfq").email.value }}
+	signingkey = {{ (onepasswordDetailsFields "5b5c2fqzl7lacqycagtjdjixmy").public_key.value }}
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[github]
+	user = acrobertson
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
