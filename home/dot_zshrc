@@ -51,6 +51,13 @@ antigen apply
 
 ### Aliases ###
 
+# Use `lsd` over default `ls`
+alias ls="lsd"
+alias l="ls -lah"
+alias la="ls -lAh"
+alias ll="ls -lh"
+alias lt="ls --tree"
+
 # Changed your .gitignore _after_ you have added / committed some files?
 # run `gri` to untrack anything in your updated .gitignore
 alias gri="git ls-files --ignored --exclude-standard | xargs -0 git rm -r"
