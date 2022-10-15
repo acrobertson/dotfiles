@@ -1,0 +1,27 @@
+[character]
+success_symbol = "[⚰](bold green)"
+error_symbol = "[⚰](bold red)"
+vicmd_symbol = "[⚰](bold greend)"
+
+[deno]
+format = "[$symbol($version )]($style)"
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+symbol = " "
+
+[nodejs]
+format = "[$symbol($version )]($style)"
+
+[php]
+format = "[$symbol($version )]($style)"
+symbol = " "
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[package]
+disabled = true
+
+[rust]
+format = "[$symbol($version )]($style)"
