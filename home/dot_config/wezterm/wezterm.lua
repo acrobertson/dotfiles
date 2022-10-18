@@ -110,6 +110,7 @@ return {
 		"JetBrains Mono",
 	}),
 	font_size = 13.0,
+	line_height = 1.2,
 	window_background_opacity = 0.975,
 
 	--bindings
