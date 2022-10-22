@@ -1,3 +1,4 @@
 return {
-	"tsserver",
+  "rust_analyzer",
+  "tsserver",
 }

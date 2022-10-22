@@ -26,6 +26,7 @@ return {
 
   -- LSP helpers
   ["jose-elias-alvarez/typescript.nvim"] = require "user.plugins.typescript",
+  ["simrat39/rust-tools.nvim"] = require "user.plugins.rust-tools",
 
   -- Telescope extensions
   ["nvim-telescope/telescope-file-browser.nvim"] = require "user.plugins.telescope-file-browser",
