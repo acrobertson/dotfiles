@@ -24,12 +24,16 @@ return {
   -- Disable unneeded plugins
   ["nvim-neo-tree/neo-tree.nvim"] = { disable = true },
 
-  -- Install custom plugins
-  ["echasnovski/mini.nvim"] = require "user.plugins.mini",
-  ["EdenEast/nightfox.nvim"] = require "user.plugins.nightfox",
+  -- LSP helpers
   ["jose-elias-alvarez/typescript.nvim"] = require "user.plugins.typescript",
+
+  -- Telescope extensions
   ["nvim-telescope/telescope-file-browser.nvim"] = require "user.plugins.telescope-file-browser",
   ["nvim-telescope/telescope-live-grep-args.nvim"] = require "user.plugins.telescope-live-grep-args",
+
+  -- Misc.
+  ["echasnovski/mini.nvim"] = require "user.plugins.mini",
+  ["EdenEast/nightfox.nvim"] = require "user.plugins.nightfox",
   ["phaazon/hop.nvim"] = require "user.plugins.hop",
   ["TimUntersberger/neogit"] = require "user.plugins.neogit",
 }
