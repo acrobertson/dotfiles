@@ -1,0 +1,27 @@
+-- configure LSP installations
+return {
+  automatic_installation = true,
+  ensure_installed = {
+    "clojure_lsp",
+    "cssls",
+    "clojure_lsp",
+    "dockerls",
+    "emmet_ls",
+    "eslint",
+    "graphql",
+    "html",
+    "intelephense",
+    "jsonls",
+    "marksman",
+    "prismals",
+    "pyright",
+    "rust_analyzer",
+    "sqls",
+    "stylelint_lsp",
+    "sumneko_lua",
+    "tailwindcss",
+    "taplo",
+    "tsserver",
+    "yamlls",
+  },
+}
