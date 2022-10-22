@@ -1,3 +1,3 @@
 -- Set colorscheme to use
-return "carbonfox"
--- return "dawnfox"
+-- return "carbonfox"
+return "dawnfox"

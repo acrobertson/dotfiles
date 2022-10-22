@@ -27,6 +27,7 @@ return {
   -- Install custom plugins
   ["echasnovski/mini.nvim"] = require "user.plugins.mini",
   ["EdenEast/nightfox.nvim"] = require "user.plugins.nightfox",
+  ["jose-elias-alvarez/typescript.nvim"] = require "user.plugins.typescript",
   ["nvim-telescope/telescope-file-browser.nvim"] = require "user.plugins.telescope-file-browser",
   ["nvim-telescope/telescope-live-grep-args.nvim"] = require "user.plugins.telescope-live-grep-args",
   ["phaazon/hop.nvim"] = require "user.plugins.hop",
