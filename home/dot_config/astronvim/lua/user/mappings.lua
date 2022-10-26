@@ -22,19 +22,30 @@ return {
     -- telescope
     ["<leader>f."] = { "<cmd>Telescope file_browser path=%:p:h<cr>", desc = "Browse this directory's files" },
     ["<leader>ff"] = {
-      function() require("telescope.builtin").find_files { hidden = true } end,
+      function()
+        require("telescope.builtin").find_files { hidden = true }
+      end,
       desc = "Search files",
     },
     ["<leader>fw"] = {
-      function() require("telescope").extensions.live_grep_args.live_grep_args() end,
+      function()
+        require("telescope").extensions.live_grep_args.live_grep_args()
+      end,
       desc = "Search words",
     },
     ["<leader>fo"] = {
-      function() require("telescope.builtin").live_grep { hidden = true, grep_open_files = true } end,
+      function()
+        require("telescope.builtin").live_grep { hidden = true, grep_open_files = true }
+      end,
       desc = "Search words in open files",
     },
     ["<leader>s."] = { "<cmd>Telescope resume<cr>", desc = "Resume search" },
-    ["<leader>so"] = { function() require("telescope.builtin").oldfiles() end, desc = "Search history" },
+    ["<leader>so"] = {
+      function()
+        require("telescope.builtin").oldfiles()
+      end,
+      desc = "Search history",
+    },
   },
   -- terminal mappings
   t = {
