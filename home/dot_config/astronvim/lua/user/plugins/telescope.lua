@@ -1,9 +1,30 @@
+local builtin_actions = require "telescope.actions"
 local fb_actions = require("telescope").extensions.file_browser.actions
 
 return {
   defaults = {
     file_ignore_patterns = {
       "^.git/",
+    },
+  },
+  mappings = {
+    i = {
+      ["<C-s>"] = builtin_actions.select_horizontal,
+    },
+    n = {
+      ["<C-s>"] = builtin_actions.select_horizontal,
+    },
+  },
+  pickers = {
+    buffers = {
+      mappings = {
+        i = {
+          ["<C-x>"] = builtin_actions.delete_buffer,
+        },
+        n = {
+          ["x"] = builtin_actions.delete_buffer,
+        },
+      },
     },
   },
   extensions = {
