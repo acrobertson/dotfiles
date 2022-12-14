@@ -5,6 +5,7 @@ return {
     "clojure_lsp",
     "cssls",
     "clojure_lsp",
+    "denols",
     "dockerls",
     "emmet_ls",
     "eslint",
