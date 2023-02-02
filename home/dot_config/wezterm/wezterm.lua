@@ -117,4 +117,5 @@ return {
 	leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 },
 	keys = key_bindings,
 	mouse_bindings = mouse_bindings,
+	window_decorations = "RESIZE",
 }
