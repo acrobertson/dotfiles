@@ -1,7 +1,7 @@
 return {
   automatic_installation = true,
   ensure_installed = {
-    "prettierd",
+    "prettier",
     "shellcheck",
     "shfmt",
     "stylua",
