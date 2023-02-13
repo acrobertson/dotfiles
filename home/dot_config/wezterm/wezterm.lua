@@ -106,13 +106,13 @@ return {
 	-- appearance
 	color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
 	font = wezterm.font_with_fallback({
+		"Berkeley Mono",
 		"MesloLGS Nerd Font Mono",
 		"JetBrains Mono",
 	}),
-	font_size = 13.0,
+	font_size = 14.0,
 	line_height = 1.2,
 	window_background_opacity = 0.975,
-
 	--bindings
 	leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 },
 	keys = key_bindings,
