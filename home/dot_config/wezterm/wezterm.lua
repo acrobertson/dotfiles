@@ -116,7 +116,7 @@ return {
 		"MesloLGS Nerd Font Mono",
 		"JetBrains Mono",
 	}),
-	font_size = 14.0,
+	font_size = 15.0,
 	line_height = 1.2,
 	window_background_opacity = 0.975,
 	--bindings
