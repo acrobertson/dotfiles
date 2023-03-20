@@ -28,7 +28,6 @@ return {
 
         -- tools
         "flake8",
-        "prettier",
         "shellcheck",
         "shfmt",
         "stylua",
@@ -75,16 +74,8 @@ return {
      end,
   },
 
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    opts = function (_, opts)
-      local nls = require("null-ls")
-      opts.sources = vim.list_extend(opts.sources, {
-        nls.builtins.formatting.prettier
-      })
-    end
-  },
-
   -- Include extra specs to properly setup lspconfig, treesitter, mason and typescript.nvim
   { import = "lazyvim.plugins.extras.lang.typescript" },
+  { import = "lazyvim.plugins.extras.formatting.prettier" },
+  -- { import = "lazyvim.plugins.extras.linting.eslint" },
 }
