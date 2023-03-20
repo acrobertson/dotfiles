@@ -24,3 +24,6 @@ local function toggle_list()
 end
 
 map("n", "<leader>uL", toggle_list, { desc = "Toggle listchars" })
+
+-- neogit
+map("n", "<leader>gg", "<cmd>Neogit<cr>", { desc = "Neogit status" })
