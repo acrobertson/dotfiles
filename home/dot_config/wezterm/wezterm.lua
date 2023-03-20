@@ -9,8 +9,14 @@ function scheme_for_appearance(appearance)
 	end
 end
 
-wezterm.on("update-right-status", function(window, pane)
-	window:set_right_status(window:active_workspace())
+wezterm.on("update-right-status", function(window)
+	local workspace = window:active_workspace()
+
+	if workspace == "default" then
+		window:set_right_status("")
+	else
+		window:set_right_status(window:active_workspace())
+	end
 end)
 
 local key_bindings = {
