@@ -38,40 +38,40 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = function()
-        local lazyvim_util = require("lazyvim.util")
-        -- local lspconfig_util = require("lspconfig.util")
+      local lazyvim_util = require("lazyvim.util")
+      -- local lspconfig_util = require("lspconfig.util")
 
-        return {
-          -- LSP server settings
-          ---@type lspconfig.options
-          -- servers = {
-          --   denols = {
-          --     root_dir = lspconfig_util.root_pattern("deno.json", "deno.jsonc"),
-          --   },
-          --   tsserver = {
-          --     settings = {
-          --       root_dir = lspconfig_util.root_pattern("package.json"),
-          --     },
-          --   },
-          -- },
+      return {
+        -- LSP server settings
+        ---@type lspconfig.options
+        -- servers = {
+        --   denols = {
+        --     root_dir = lspconfig_util.root_pattern("deno.json", "deno.jsonc"),
+        --   },
+        --   tsserver = {
+        --     settings = {
+        --       root_dir = lspconfig_util.root_pattern("package.json"),
+        --     },
+        --   },
+        -- },
 
-          -- Additional LSP server setup
-          ---@type table<string, fun(server: string, opts:_.lspconfig.options):boolean?>
-          setup = {
-            tsserver = function(_, opts)
-              lazyvim_util.on_attach(function(client)
-                -- disable formatting for tsserver so prettier can handle it
-                if client.name == "tsserver" then
-                  -- client.server_capabilities.documentFormattingProvider = false
-                  opts.capabilities.documentFormattingProvider = false
-                end
-              end)
-              -- require("typescript").setup({ server = opts })
-              -- return true
-            end,
-          },
-        }
-     end,
+        -- Additional LSP server setup
+        ---@type table<string, fun(server: string, opts:_.lspconfig.options):boolean?>
+        setup = {
+          tsserver = function(_, opts)
+            lazyvim_util.on_attach(function(client)
+              -- disable formatting for tsserver so prettier can handle it
+              if client.name == "tsserver" then
+                -- client.server_capabilities.documentFormattingProvider = false
+                opts.capabilities.documentFormattingProvider = false
+              end
+            end)
+            -- require("typescript").setup({ server = opts })
+            -- return true
+          end,
+        },
+      }
+    end,
   },
 
   -- Include extra specs to properly setup lspconfig, treesitter, mason and typescript.nvim
