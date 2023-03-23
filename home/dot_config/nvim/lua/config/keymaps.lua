@@ -30,3 +30,4 @@ map("n", "<leader>gg", "<cmd>Neogit<cr>", { desc = "Neogit status" })
 
 -- telescope
 map("n", "<leader>f.", "<cmd>Telescope file_browser path=%:p:h<cr>", { desc = "Browse this directory's files" })
+map("n", "<leader>su", "<cmd>Telescope undo<cr>", { desc = "Undo" })
