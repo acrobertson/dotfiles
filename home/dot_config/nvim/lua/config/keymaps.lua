@@ -27,3 +27,6 @@ map("n", "<leader>uL", toggle_list, { desc = "Toggle listchars" })
 
 -- neogit
 map("n", "<leader>gg", "<cmd>Neogit<cr>", { desc = "Neogit status" })
+
+-- telescope
+map("n", "<leader>f.", "<cmd>Telescope file_browser path=%:p:h<cr>", { desc = "Browse this directory's files" })
