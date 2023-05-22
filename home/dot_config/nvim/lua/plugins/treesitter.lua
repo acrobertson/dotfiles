@@ -44,11 +44,5 @@ return {
     -- end,
   },
 
-  -- add jsonls and schemastore and set up treesitter for json, json5 and jsonc
-  { import = "lazyvim.plugins.extras.lang.json" },
-
-  -- add autotag plugin for auto closing and renaming HTML/TSX tags
-  -- { "windwp/nvim-ts-autotag" },
-
   { "nvim-treesitter/playground" },
 }
