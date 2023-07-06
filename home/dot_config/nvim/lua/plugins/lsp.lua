@@ -34,21 +34,4 @@ return {
       },
     },
   },
-
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   opts = function()
-  --     return {
-  --       -- Additional LSP server setup
-  --       ---@type table<string, fun(server: string, opts:_.lspconfig.options):boolean?>
-  --       setup = {
-  --         rust_analyzer = function(_, opts)
-  --           require("rust-tools").setup({ server = opts })
-  --         end,
-  --       },
-  --     }
-  --   end,
-  -- },
-
-  { "simrat39/rust-tools.nvim" },
 }
