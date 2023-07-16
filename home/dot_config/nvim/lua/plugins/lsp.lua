@@ -1,8 +1,8 @@
 return {
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
         -- language servers
         "clojure-lsp",
         "css-lsp",
@@ -31,7 +31,7 @@ return {
         "shellcheck",
         "shfmt",
         "stylua",
-      },
-    },
+      })
+    end,
   },
 }

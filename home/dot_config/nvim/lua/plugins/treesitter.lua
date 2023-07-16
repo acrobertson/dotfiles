@@ -4,11 +4,8 @@ return {
     dependencies = {
       { "windwp/nvim-ts-autotag" },
     },
-    opts = {
-      autotag = {
-        enable = true,
-      },
-      ensure_installed = {
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
         "bash",
         "c",
         "clojure",
@@ -36,12 +33,11 @@ return {
         "typescript",
         "vim",
         "yaml",
-      },
-    },
-    -- config = function()
-    --   -- TODO: figure out if this is doing anything
-    --   -- require("nvim-treesitter.install").compilers = { "gcc-12" }
-    -- end,
+      })
+    end,
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
   },
 
   { "nvim-treesitter/playground" },
