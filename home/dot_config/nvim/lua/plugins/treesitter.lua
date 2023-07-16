@@ -30,9 +30,16 @@ return {
         "sql",
         "toml",
         "tsx",
+        "twig",
         "typescript",
         "vim",
         "yaml",
+
+        -- git
+        "diff",
+        "git_rebase",
+        "gitcommit",
+        "gitignore",
       })
     end,
     config = function()
