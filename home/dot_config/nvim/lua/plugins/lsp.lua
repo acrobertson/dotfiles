@@ -8,7 +8,7 @@ return {
         "css-lsp",
         "deno",
         "dockerfile-language-server",
-        -- "emmet-ls",
+        "emmet-language-server",
         "eslint-lsp",
         -- "graphql-language-service-cli",
         "html-lsp",
