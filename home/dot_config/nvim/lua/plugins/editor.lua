@@ -2,6 +2,9 @@ return {
   -- Disable neo-tree
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
 
+  -- multi cursor
+  { "mg979/vim-visual-multi" },
+
   -- Git views
   {
     "sindrets/diffview.nvim",
