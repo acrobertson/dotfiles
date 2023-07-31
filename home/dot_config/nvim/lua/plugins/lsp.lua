@@ -34,4 +34,41 @@ return {
       })
     end,
   },
+
+  {
+    "neovim/nvim-lspconfig",
+    ---@class PluginLspOpts
+    opts = {
+      ---@type lspconfig.options
+      servers = {
+        cssls = {
+          settings = {
+            css = {
+              lint = {
+                unknownAtRules = "ignore",
+              },
+            },
+          },
+        },
+        stylelint_lsp = {
+          filetypes = {
+            "css",
+            "less",
+            "scss",
+            "sugarss",
+            "vue",
+            "wxss",
+          },
+          settings = {
+            -- helps stylelint find the eslintrc when it's placed in a subfolder instead of the cwd root
+            workingDirectory = { mode = "auto" },
+            stylelintplus = {
+              autoFixOnFormat = true,
+              autoFixOnSave = true,
+            },
+          },
+        },
+      },
+    },
+  },
 }
