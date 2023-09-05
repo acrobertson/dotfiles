@@ -97,6 +97,80 @@ local key_bindings = {
 		mods = "LEADER",
 		action = act.QuickSelect,
 	},
+
+	-- Map meh bindings to ALT for zellij
+	{
+		key = "c",
+		mods = "CTRL|ALT|SHIFT",
+		action = act.SendKey({
+			key = "c",
+			mods = "ALT",
+		}),
+	},
+	{
+		key = "r",
+		mods = "CTRL|ALT|SHIFT",
+		action = act.SendKey({
+			key = "r",
+			mods = "ALT",
+		}),
+	},
+	{
+		key = "p",
+		mods = "CTRL|ALT|SHIFT",
+		action = act.SendKey({
+			key = "p",
+			mods = "ALT",
+		}),
+	},
+	{
+		key = "m",
+		mods = "CTRL|ALT|SHIFT",
+		action = act.SendKey({
+			key = "m",
+			mods = "ALT",
+		}),
+	},
+	{
+		key = "t",
+		mods = "CTRL|ALT|SHIFT",
+		action = act.SendKey({
+			key = "t",
+			mods = "ALT",
+		}),
+	},
+	{
+		key = "v",
+		mods = "CTRL|ALT|SHIFT",
+		action = act.SendKey({
+			key = "v",
+			mods = "ALT",
+		}),
+	},
+	{
+		key = "f",
+		mods = "CTRL|ALT|SHIFT",
+		action = act.SendKey({
+			key = "f",
+			mods = "ALT",
+		}),
+	},
+	{
+		key = "s",
+		mods = "CTRL|ALT|SHIFT",
+		action = act.SendKey({
+			key = "s",
+			mods = "ALT",
+		}),
+	},
+	{
+		key = "z",
+		mods = "CTRL|ALT|SHIFT",
+		action = act.SendKey({
+			key = "z",
+			mods = "ALT",
+		}),
+	},
 }
 
 local mouse_bindings = {
