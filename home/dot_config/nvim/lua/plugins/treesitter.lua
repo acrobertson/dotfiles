@@ -10,7 +10,6 @@ return {
         "c",
         "clojure",
         "css",
-        "help",
         "html",
         "javascript",
         "jsdoc",
