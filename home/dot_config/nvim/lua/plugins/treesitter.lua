@@ -33,7 +33,6 @@ return {
         "twig",
         "typescript",
         "vim",
-        "yaml",
 
         -- git
         "diff",
