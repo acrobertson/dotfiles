@@ -88,4 +88,22 @@ return {
       },
     },
   },
+
+  { "jwalton512/vim-blade" },
+
+  {
+    "nvimtools/none-ls.nvim",
+    opts = function(_, opts)
+      local nls = require("null-ls")
+      -- Add `blade` to default prettier filetypes
+      table.insert(
+        opts.sources,
+        nls.builtins.formatting.prettierd.with({
+          extra_filetypes = { "blade" },
+        })
+      )
+      -- Add `pint` for Laravel
+      table.insert(opts.sources, nls.builtins.formatting.pint)
+    end,
+  },
 }
