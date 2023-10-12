@@ -1,9 +1,6 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      { "windwp/nvim-ts-autotag" },
-    },
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "bash",
@@ -38,14 +35,6 @@ return {
         "git_rebase",
         "gitcommit",
         "gitignore",
-      })
-    end,
-    config = function()
-      require("nvim-ts-autotag").setup({
-        enable = true,
-        enable_rename = true,
-        enable_close = true,
-        enable_close_on_slash = false,
       })
     end,
   },
