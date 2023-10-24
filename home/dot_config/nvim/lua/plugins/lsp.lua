@@ -15,7 +15,6 @@ return {
         "intelephense",
         "json-lsp",
         "lua-language-server",
-        "marksman",
         "prisma-language-server",
         "pyright",
         "rust-analyzer",
