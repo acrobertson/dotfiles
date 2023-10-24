@@ -23,6 +23,7 @@ return {
         "stylelint-lsp",
         "tailwindcss-language-server",
         "taplo",
+        "twigcs",
         "typescript-language-server",
         "yaml-language-server",
 
@@ -104,6 +105,9 @@ return {
       )
       -- Add `pint` for Laravel
       table.insert(opts.sources, nls.builtins.formatting.pint)
+
+      -- Add `twigcs` for Twig
+      table.insert(opts.sources, nls.builtins.diagnostics.twigcs)
     end,
   },
 }
