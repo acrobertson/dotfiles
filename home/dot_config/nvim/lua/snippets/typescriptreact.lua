@@ -45,4 +45,32 @@ return {
       }
     )
   ),
+
+  s(
+    {
+      trig = "rc",
+      name = "React Component",
+      dscr = "Create a React component with props",
+    },
+    fmt(
+      [[
+    interface {props_interface} {{
+      {props_types}
+    }}
+    const {component} = ({{{props}}}: {comp_props_type}) => {{
+      return (
+        {children}
+      );
+    }}
+    ]],
+      {
+        props_interface = f(append_args_to_input, { 1 }, { user_args = { "Props" } }),
+        props_types = i(2),
+        component = i(1, "Component"),
+        props = i(3),
+        comp_props_type = f(append_args_to_input, { 1 }, { user_args = { "Props" } }),
+        children = i(0),
+      }
+    )
+  ),
 }
