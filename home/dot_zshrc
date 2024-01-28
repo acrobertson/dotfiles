@@ -65,6 +65,9 @@ alias la="ls -lAh"
 alias ll="ls -lh"
 alias lt="ls --tree --ignore-glob 'node_modules' --ignore-glob 'vendor'"
 
+## zellij
+alias zj="zellij"
+
 # Changed your .gitignore _after_ you have added / committed some files?
 # run `gri` to untrack anything in your updated .gitignore
 alias gri="git ls-files --ignored --exclude-standard | xargs -0 git rm -r"
