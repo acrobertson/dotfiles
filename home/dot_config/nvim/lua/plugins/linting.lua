@@ -1,13 +1,11 @@
 return {
-  -- TODO: use nvim-lint for twigcs
-  -- No builtin avilable, so it'd need to be custom
   {
-    "nvimtools/none-ls.nvim",
+    "mfussenegger/nvim-lint",
+    optional = true,
     opts = function(_, opts)
-      local nls = require("null-ls")
-
-      -- Add `twigcs` for Twig
-      table.insert(opts.sources, nls.builtins.diagnostics.twigcs)
+      opts.linters_by_ft = {
+        twig = { "twigcs" },
+      }
     end,
   },
 }
