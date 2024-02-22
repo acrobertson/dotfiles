@@ -21,7 +21,7 @@ return {
         "stylelint-lsp",
         "tailwindcss-language-server",
         "taplo",
-        "twigcs",
+        "twiggy-language-server",
         "typescript-language-server",
         "yaml-language-server",
 
@@ -30,6 +30,7 @@ return {
         "shellcheck",
         "shfmt",
         "stylua",
+        "twigcs",
       })
     end,
   },
