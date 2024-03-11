@@ -101,5 +101,12 @@ return {
     },
   },
 
+  {
+    "dmmulroy/ts-error-translator.nvim",
+    config = function()
+      require("ts-error-translator").setup()
+    end,
+  },
+
   { "jwalton512/vim-blade" },
 }
