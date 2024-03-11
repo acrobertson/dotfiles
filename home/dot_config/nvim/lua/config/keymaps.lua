@@ -23,6 +23,14 @@ local function toggle_list()
   end
 end
 
+-- Disable default bindings I don't need
+for _, key in pairs({
+  "<S-h>", -- bprev
+  "<S-l>", -- bnext
+}) do
+  vim.keymap.del("n", key)
+end
+
 map("n", "<leader>uL", toggle_list, { desc = "Toggle listchars" })
 
 -- neogit
