@@ -107,43 +107,6 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-# add hook to run `valet use` when entering a Valet-configured directory
-# TODO replace this with new `valet isolate` feature
-autoload -U add-zsh-hook colors
-valet-use() {
-	local phprc_path="./.valetphprc"
-
-	# check if .valetphprc file exists in this directory
-	if [ -f "$phprc_path" ]; then
-		# make sure valet is executable
-		if valet_loc="$(type -p "valet")" || [[ -z $valet_loc ]]; then
-			local requested_version_full="$(cat $phprc_path)" # e.g., php@7.4
-			local requested_version="$(echo $requested_version_full | sed -E 's/php@//')" # e.g., 7.4
-			local current_version="$(php -r 'echo PHP_MAJOR_VERSION . "." . PHP_MINOR_VERSION;')" # e.g., 7.4
-
-			if [ "$requested_version" = "$current_version" ]; then
-				echo "Using PHP $fg[cyan]v$current_version$fg[white]"
-			else
-				printf '%s' \
-					"Found a .valetphprc. It wants $fg[cyan]v$requested_version$fg[white]; " \
-					"you're using $fg[cyan]v$current_version$fg[white]."
-				echo
-				if read -q "choice?Want to switch? $fg_bold[white]Press Y/y: $fg_no_bold[white]"; then
-					echo
-					valet use && composer global update
-				else
-					echo "\nIf you change your mind, run $fg[cyan]valet use && composer global update$fg[white]."
-				fi
-			fi
-		else
-			echo "Valet not found. Have you installed it?"
-		fi
-	fi
-}
-add-zsh-hook chpwd valet-use
-colors
-valet-use
-
 # vterm helpers
 vterm_printf(){
     if [ -n "$TMUX" ] && ([ "${TERM%%-*}" = "tmux" ] || [ "${TERM%%-*}" = "screen" ] ); then
