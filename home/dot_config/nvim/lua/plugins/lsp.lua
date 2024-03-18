@@ -4,6 +4,7 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         -- language servers
+        "astro-language-server",
         "clojure-lsp",
         "css-lsp",
         "deno",
@@ -70,6 +71,7 @@ return {
         },
         emmet_language_server = {
           filetypes = {
+            "astro",
             "css",
             "eruby",
             "html",
