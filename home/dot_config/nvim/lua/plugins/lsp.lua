@@ -23,7 +23,6 @@ return {
         "tailwindcss-language-server",
         "taplo",
         "twiggy-language-server",
-        "typescript-language-server",
         "yaml-language-server",
 
         -- tools
