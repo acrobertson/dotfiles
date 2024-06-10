@@ -4,26 +4,17 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         -- language servers
-        "clojure-lsp",
         "css-lsp",
         "deno",
-        "dockerfile-language-server",
         "emmet-language-server",
-        "eslint-lsp",
         "graphql-language-service-cli",
         "html-lsp",
         "json-lsp",
         "lua-language-server",
-        "prisma-language-server",
-        "pyright",
         "stylelint-lsp",
-        "tailwindcss-language-server",
-        "taplo",
         "twiggy-language-server",
-        "yaml-language-server",
 
         -- tools
-        "flake8",
         "shellcheck",
         "shfmt",
         "stylua",
