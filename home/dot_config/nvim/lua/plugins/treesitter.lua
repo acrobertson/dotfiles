@@ -3,7 +3,6 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        "astro",
         "bash",
         "c",
         "clojure",
@@ -17,15 +16,12 @@ return {
         "markdown",
         "markdown_inline",
         "norg",
-        "php",
         "prisma",
         "python",
         "query",
         "regex",
         "rust",
         "scss",
-        "sql",
-        "toml",
         "tsx",
         "twig",
         "typescript",
@@ -33,9 +29,6 @@ return {
 
         -- git
         "diff",
-        "git_rebase",
-        "gitcommit",
-        "gitignore",
       })
     end,
   },

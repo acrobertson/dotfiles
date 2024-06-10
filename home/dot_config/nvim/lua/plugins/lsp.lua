@@ -4,7 +4,6 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         -- language servers
-        "astro-language-server",
         "clojure-lsp",
         "css-lsp",
         "deno",
@@ -13,12 +12,10 @@ return {
         "eslint-lsp",
         "graphql-language-service-cli",
         "html-lsp",
-        "intelephense",
         "json-lsp",
         "lua-language-server",
         "prisma-language-server",
         "pyright",
-        "sqlls",
         "stylelint-lsp",
         "tailwindcss-language-server",
         "taplo",
