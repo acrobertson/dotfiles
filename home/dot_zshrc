@@ -78,6 +78,10 @@ alias fix="git diff --name-only | uniq | xargs code"
 # fzf
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 
+nf() {
+  nvim $(fzf --preview "bat --color 'always' {}")
+}
+
 # brew services
 alias bsl="brew services list"
 
