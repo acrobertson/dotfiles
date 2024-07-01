@@ -193,6 +193,7 @@ local mouse_bindings = {
 
 return {
 	-- appearance
+	adjust_window_size_when_changing_font_size = false,
 	color_scheme = scheme_for_appearance(get_appearance()),
 	font = wezterm.font_with_fallback({
 		"Berkeley Mono",
