@@ -76,6 +76,10 @@ alias gri="git ls-files --ignored --exclude-standard | xargs -0 git rm -r"
 alias fix="git diff --name-only | uniq | xargs code"
 
 # fzf
+if type rg &> /dev/null; then
+  export FZF_DEFAULT_COMMAND="rg --files --hidden"
+fi
+
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 
 nf() {
