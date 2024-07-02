@@ -80,6 +80,8 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND="rg --files --hidden"
 fi
 
+[ -f ~/.local/share/nvim/lazy/tokyonight.nvim/extras/fzf/tokyonight_night.sh ] && source ~/.local/share/nvim/lazy/tokyonight.nvim/extras/fzf/tokyonight_night.sh
+
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 
 nf() {
