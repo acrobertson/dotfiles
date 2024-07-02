@@ -87,6 +87,9 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 nf() {
   nvim $(fzf --preview "bat --color 'always' {}")
 }
+tf() {
+  tmux attach -t "$(tmux ls -F '#{session_name}' | fzf)"
+}
 
 # brew services
 alias bsl="brew services list"
