@@ -77,7 +77,7 @@ alias fix="git diff --name-only | uniq | xargs code"
 
 # fzf
 if type rg &> /dev/null; then
-  export FZF_DEFAULT_COMMAND="rg --files --hidden"
+  export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/*'"
 fi
 
 [ -f ~/.local/share/nvim/lazy/tokyonight.nvim/extras/fzf/tokyonight_night.sh ] && source ~/.local/share/nvim/lazy/tokyonight.nvim/extras/fzf/tokyonight_night.sh
