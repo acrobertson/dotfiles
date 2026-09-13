@@ -1,5 +1,8 @@
 # dotfiles
 
+> [!NOTE]
+> This repo has been superseded by my [Nix-based config](https://github.com/acrobertson/infra), which covers multiple systems instead of just a single home directory.
+
 Collecting the various configs, settings & snippets I have set up. Trying to track my changes like a responsible person.
 
 I've switched from manually maintaining symlinks to using [chezmoi](https://www.chezmoi.io/).
